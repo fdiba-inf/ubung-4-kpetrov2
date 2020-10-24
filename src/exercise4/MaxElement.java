@@ -11,16 +11,19 @@ public class MaxElement {
     System.out.println("Enter the volume of the array: ");
     int i = input.nextInt();
     double[] numbers = new double[i];
-    double maxn = numbers[0];
+    
 
     System.out.println("Enter numbers: ");
     for(int index = 0; index < numbers.length; index++) {
 
       numbers[index] = input.nextDouble();
     }
-    for( int max = 1; max < numbers.length; max++) {
+    
+    double maxn = 0;
 
-      if (numbers[max] > numbers[max - 1]) {
+    for( int max = 0; max < numbers.length; max++) {
+
+      if (numbers[max] > maxn) {
 
         maxn = numbers[max];
         

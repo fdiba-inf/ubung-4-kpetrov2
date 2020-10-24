@@ -11,23 +11,29 @@ public class MinIndex {
 
     System.out.println("Enter the volume of the array: ");
     int i = input.nextInt();
-    int indexmin = 0;
     double[] numbers = new double[i];
-    double minn = numbers[0];
+    int indexmin = 0;
+    
 
     System.out.println("Enter the numbers: ");
     for(int index = 0; index < numbers.length; index++) {
 
       numbers[index] = input.nextDouble();
+      
     }
-    for(int min = 1; min < numbers.length; min++) {
+    
+    double minn = numbers[0];
 
-      if(numbers[min] < numbers[min - 1]) {
+    for(int min = 0; min < numbers.length; min++) {
 
-        minn = numbers[min];
+      if(minn > numbers[min]) {
+
         indexmin = min;
+        minn = numbers[min];
+        
       }
     }
+
     System.out.println("Min index: " + indexmin);
   }
 }
