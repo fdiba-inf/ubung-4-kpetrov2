@@ -8,10 +8,12 @@ public class MaxElement {
 
     Scanner input = new Scanner(System.in);
 
+    System.out.println("Enter the volume of the array: ");
     int i = input.nextInt();
     double[] numbers = new double[i];
-    double maxn = 0;
+    double maxn = numbers[0];
 
+    System.out.println("Enter numbers: ");
     for(int index = 0; index < numbers.length; index++) {
 
       numbers[index] = input.nextDouble();
