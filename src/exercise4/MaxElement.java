@@ -19,7 +19,7 @@ public class MaxElement {
       numbers[index] = input.nextDouble();
     }
     
-    double maxn = 0;
+    double maxn = numbers[0];
 
     for( int max = 0; max < numbers.length; max++) {
 
